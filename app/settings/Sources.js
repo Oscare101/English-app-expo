@@ -20,7 +20,7 @@ const Lesson = () => {
         <Text style={S.text}>
           &bull; Grammarway - Jenny Dooley, Virginia Evans {'\n'}
           &bull; Oxford Practice Grammar Advanced - George Yule {'\n'}
-          &bull; English File - Christian Latham-Koening
+          &bull; English File - Christian Latham-Koening {'\n'}
         </Text>
       </ScrollView>
     </View>
