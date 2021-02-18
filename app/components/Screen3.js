@@ -16,7 +16,6 @@ const { width } = Dimensions.get('screen')
 const Screen3 = () => {
   return (
     <View style={styles.View}>
-      <Header />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ paddingBottom: 65, flex: 1, width }}>
           <Contact />

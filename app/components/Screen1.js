@@ -18,7 +18,6 @@ import Obligation from '../lessons/Obligation'
 const Screen1 = () => {
   return (
     <View style={S.View}>
-      <Header />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={S.blockList}>
           <Page title="times" />

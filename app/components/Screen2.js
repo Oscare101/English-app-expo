@@ -8,7 +8,6 @@ const { width } = Dimensions.get('screen')
 const Screen2 = () => {
   return (
     <View style={S.View}>
-      <Header />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ paddingBottom: 65, flex: 1, width }}>
           <PracticeTimes />

@@ -21,7 +21,6 @@ const S = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 10,
   },
   screenTitle: {
     fontSize: 26,
