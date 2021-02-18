@@ -52,9 +52,4 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  title: { textAlign: 'center' },
-  text: {
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
 })
