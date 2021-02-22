@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import Screen1 from './app/components/Screen1'
@@ -12,6 +12,10 @@ export default function App() {
   return (
     <>
       <View style={styles.container}>
+        <StatusBar
+          barStyle="default"
+          backgroundColor={color.headerLessonColor}
+        />
         <Header />
         <NavigationContainer>
           <Tab.Navigator
