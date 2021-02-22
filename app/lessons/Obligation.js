@@ -13,7 +13,7 @@ const Lesson = () => {
   return (
     <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
-        <Text style={S.headerTitle}>Modal verbs</Text>
+        <Text style={S.headerTitle}>Semi-Modal verbs</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View style={S.titleOrange}>
@@ -208,7 +208,7 @@ const Obligation = () => {
           onPress={() => setModalVisible(!modalVisible)}
           style={S.blockLesson}
         >
-          <Text style={S.firstTitle}>Modal verbs</Text>
+          <Text style={S.firstTitle}>Semi-Modal verbs</Text>
         </TouchableOpacity>
         <View style={S.like}>
           <TouchableOpacity onPress={() => setLike(!like)}>

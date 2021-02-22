@@ -14,6 +14,7 @@ import Prepositions from '../lessons/Prepositions'
 import PresentPerfectContinuous from '../lessons/PresentPerfectContinuous'
 import PresentPerfect from '../lessons/PresentPerfect'
 import Obligation from '../lessons/Obligation'
+import Possibility from '../lessons/Possibility'
 
 const Screen1 = () => {
   return (
@@ -21,6 +22,7 @@ const Screen1 = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={S.blockList}>
           <Page title="times" />
+
           <PastSimple />
           <PastContinuous />
 
@@ -30,9 +32,14 @@ const Screen1 = () => {
           <PresentPerfect />
           <PresentPerfectContinuous />
 
-          <Page title="cheat sheets" />
+          <Page title="grammar" />
+
+          <Possibility />
           <Obligation />
           <Prepositions />
+
+          <Page title="cheat sheets" />
+
           <Very />
         </View>
       </ScrollView>
