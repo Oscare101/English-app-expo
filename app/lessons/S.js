@@ -170,12 +170,15 @@ const S = StyleSheet.create({
     borderColor: color.bottomNavActive,
     borderWidth: 1,
     borderStyle: 'solid',
-    padding: 20,
+    padding: 0,
+    overflow: 'hidden',
   },
   shareText: {
     fontSize: 26,
     letterSpacing: 5,
+    textAlign: 'center',
   },
+  gradient: { width: '100%' },
   settings: {
     width: width * 0.97,
   },

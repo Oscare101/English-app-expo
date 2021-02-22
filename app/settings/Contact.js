@@ -10,9 +10,9 @@ import {
   Share,
 } from 'react-native'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
-
+import { LinearGradient } from 'expo-linear-gradient'
 import S from '../lessons/S'
-
+import color from '../components/color'
 const onShare = async () => {
   try {
     const result = await Share.share({
@@ -82,8 +82,20 @@ const Lesson = () => {
           <Text style={S.text}>
             If you like this app you can propose it to your friends:)
           </Text>
+
           <TouchableOpacity onPress={onShare} style={S.share}>
-            <Text style={S.shareText}>Share</Text>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={[
+                color.backgroundColor,
+                color.backgroundColor,
+                color.backgroundColor,
+                color.bottomNavActive,
+              ]}
+              style={S.gradient}
+            >
+              <Text style={S.shareText}>Share</Text>
+            </LinearGradient>
           </TouchableOpacity>
         </View>
       </ScrollView>

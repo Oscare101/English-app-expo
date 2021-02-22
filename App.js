@@ -1,7 +1,6 @@
 import React from 'react'
-import { StatusBar, View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import TabNavigator from './app/navigation/TabNavigator'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import Screen1 from './app/components/Screen1'
 import Screen2 from './app/components/Screen2'
