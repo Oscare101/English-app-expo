@@ -72,7 +72,7 @@ const Lesson = () => {
         <View style={S.a}>
           <Text style={S.at}>
             We <Text style={S.b}>have lived/have been living</Text> here for
-            ywenty years
+            twenty years
           </Text>
         </View>
         <View style={{ padding: 10 }}></View>

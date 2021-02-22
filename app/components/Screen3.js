@@ -17,7 +17,7 @@ const Screen3 = () => {
   return (
     <View style={styles.View}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{ paddingBottom: 65, flex: 1, width }}>
+        <View style={S.blockList}>
           <Contact />
           <Sources />
         </View>
