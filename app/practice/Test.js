@@ -48,17 +48,13 @@ const Test = (props) => {
     if (test) {
       return (
         <View style={S.c}>
-          <Text style={S.ct}>
-            We use present perfect when the action has recently started..
-          </Text>
+          <Text style={S.ct}>{props.hint}</Text>
         </View>
       )
     } else {
       return (
         <View style={S.w}>
-          <Text style={S.wt}>
-            We use present perfect when the action has recently started..
-          </Text>
+          <Text style={S.wt}>{props.hint}</Text>
         </View>
       )
     }

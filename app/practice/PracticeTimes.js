@@ -13,17 +13,40 @@ import S from '../lessons/S'
 import color from '../components/color'
 import Test from './Test'
 
-// let inputText = ''
-// let inputTarget = 'seen'
-
-// const Submit = () => {
-//   console.log(inputText)
-//   if (inputText === inputTarget) {
-//     console.log('yes')
-//   } else {
-//     console.log('no')
-//   }
-// }
+const testList = [
+  {
+    title: "Oh no! We're late! The film _______",
+    a: 'start',
+    b: 'has already started',
+    c: 'was started',
+    d: 'is starting',
+    A: 'has already started',
+    hint: 'We use present perfect when the action has recently started',
+  },
+  {
+    title: 'It ______ (to get) colder. Do you really want to go out?',
+    a: 'get',
+    b: 'is getting',
+    c: 'is geting ',
+    d: 'gets',
+    A: 'is getting',
+    hint: 'We use present continuous to talk about temporary situation',
+  },
+]
+const TestBlock = () => {
+  return testList.map((key) => (
+    <Test
+      key={key.title}
+      title={key.title}
+      a={key.a}
+      b={key.b}
+      c={key.c}
+      d={key.d}
+      A={key.A}
+      hint={key.hint}
+    />
+  ))
+}
 
 const Lesson = () => {
   return (
@@ -33,33 +56,7 @@ const Lesson = () => {
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View style={{ padding: 10 }}>
-          <Test
-            title="Oh no! We're late! The film _______"
-            a="start"
-            b="has already started"
-            c="was started"
-            d="is starting"
-            A="has already started"
-          />
-          {/* <View style={styles.inputBlock}>
-            <Text>I vahe never</Text>
-            <TextInput
-              style={styles.input}
-              autoCorrect={false}
-              autoCapitalize="none"
-              onChangeText={(text) => (inputText = text)}
-              onSubmitEditing={Submit}
-            />
-            <Text>(to see) this later </Text>
-
-            <TouchableOpacity onPress={Submit}>
-              <Ionicons
-                name="checkbox"
-                size={50}
-                color={color.headerLessonColor}
-              />
-            </TouchableOpacity>
-          </View> */}
+          <TestBlock />
         </View>
       </ScrollView>
     </View>

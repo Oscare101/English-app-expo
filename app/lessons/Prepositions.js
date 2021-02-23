@@ -79,6 +79,8 @@ const Lesson = () => {
           </View>
           <View style={S.blockWithGreen}>
             <Text style={S.text}>
+              Although, I'm gaining <Text style={S.textHint}>respect for</Text>{' '}
+              press secretaries{'\n'}
               He <Text style={S.textHint}>appologized for</Text> being late
               {'\n'}
               I'll <Text style={S.textHint}>pay for</Text> it{'\n'}
@@ -119,8 +121,10 @@ const Lesson = () => {
           </View>
           <View style={S.blockWithGreen}>
             <Text style={S.text}>
-              They <Text style={S.textHint}>succeeded in</Text> climbing the
-              mountain{'\n'}I don't <Text style={S.textHint}>believe in </Text>
+              <Text style={S.textHint}>Specialist in</Text> nuclear and game
+              theory They <Text style={S.textHint}>succeeded in</Text> climbing
+              the mountain{'\n'}I don't{' '}
+              <Text style={S.textHint}>believe in </Text>
               ghosts{'\n'}
               She is <Text style={S.textHint}>interested in</Text> French
               literature{'\n'}

@@ -15,6 +15,7 @@ import PresentPerfectContinuous from '../lessons/PresentPerfectContinuous'
 import PresentPerfect from '../lessons/PresentPerfect'
 import Obligation from '../lessons/Obligation'
 import Possibility from '../lessons/Possibility'
+import Articles from '../lessons/Articles'
 
 const Screen1 = () => {
   return (
@@ -37,6 +38,7 @@ const Screen1 = () => {
           <Possibility />
           <Obligation />
           <Prepositions />
+          <Articles />
 
           <Page title="cheat sheets" />
 
