@@ -12,8 +12,9 @@ const Screen2 = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={S.blockList}>
           <Page title="test" />
-          <PracticeTimes />
+          <PracticeTimes title="Times" />
           <Page title="sentences" />
+          <PracticeTimes title="Articles" />
         </View>
       </ScrollView>
     </View>

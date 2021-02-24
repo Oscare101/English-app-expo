@@ -38,6 +38,7 @@ const definiteArticle = {
   'the media (the from of art/entertainment)':
     "Let's go to the theatre at the weekend. We tend to listen to the radio for news",
   measurements: 'You can buy saffron by the gram',
+  'musical instruments': 'She plays the violin',
   newspaper: 'the Times, the Helard Tribune, the Daily Morror',
   'in some grammatical constructions and superlatives':
     'the more the merrier, all the better, the most dangerous profession, the last time, the only one',

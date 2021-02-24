@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons'
 import S from '../lessons/S'
 import color from '../components/color'
 import Test from './Test'
+import TestListFile from './TestListFile'
 
 const testList = [
   {
@@ -33,36 +34,42 @@ const testList = [
     hint: 'We use present continuous to talk about temporary situation',
   },
 ]
-const TestBlock = () => {
-  return testList.map((key) => (
-    <Test
-      key={key.title}
-      title={key.title}
-      a={key.a}
-      b={key.b}
-      c={key.c}
-      d={key.d}
-      A={key.A}
-      hint={key.hint}
-    />
+
+const TestBlock = (props) => {
+  const currentUnit = props.title
+  const currentTest = TestListFile[currentUnit]
+  // return <Text>{currentTest[1].A}</Text>
+  return currentTest.map((key) => (
+    <>
+      <Test
+        key={key.title}
+        title={key.title}
+        a={key.a}
+        b={key.b}
+        c={key.c}
+        d={key.d}
+        A={key.A}
+        hint={key.hint}
+      />
+    </>
   ))
 }
 
-const Lesson = () => {
+const Lesson = (props) => {
   return (
     <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
-        <Text style={S.headerTitle}>Practice Times</Text>
+        <Text style={S.headerTitle}>{props.title}</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View style={{ padding: 10 }}>
-          <TestBlock />
+          <TestBlock title={props.title} />
         </View>
       </ScrollView>
     </View>
   )
 }
-const PracticeTimes = () => {
+const PracticeTimes = (props) => {
   const [modalVisible, setModalVisible] = useState(false)
   const [like, setLike] = useState(false)
   const [repeat, setRepeat] = useState(false)
@@ -81,7 +88,7 @@ const PracticeTimes = () => {
   return (
     <View>
       <Modal visible={modalVisible} animationType="slide">
-        <Lesson />
+        <Lesson title={props.title} />
         <TouchableOpacity
           onPress={() => setModalVisible(!modalVisible)}
           style={S.close}
@@ -94,7 +101,7 @@ const PracticeTimes = () => {
           onPress={() => setModalVisible(!modalVisible)}
           style={S.blockLesson}
         >
-          <Text style={S.firstTitle}>Practice Times</Text>
+          <Text style={S.firstTitle}>{props.title}</Text>
         </TouchableOpacity>
         <View style={S.like}>
           <TouchableOpacity onPress={() => setLike(!like)}>

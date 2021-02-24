@@ -17,7 +17,7 @@ const Test = (props) => {
   const [disableTest, setDisableTest] = useState(false)
   const [test, setTest] = useState(false)
 
-  let colorIcon
+  // let colorIcon
   let answer = props.A
   let choice
 
@@ -38,11 +38,11 @@ const Test = (props) => {
     colorTest = color.headerLessonColor
   }
 
-  if (test) {
-    colorIcon = 'green'
-  } else {
-    colorIcon = 'red'
-  }
+  // if (test) {
+  //   colorIcon = 'green'
+  // } else {
+  //   colorIcon = 'red'
+  // }
 
   const Hint = () => {
     if (test) {
@@ -140,6 +140,7 @@ const Test = (props) => {
       >
         <Text>repeat</Text>
       </TouchableOpacity>
+      <View style={styles.afterQuestion} />
     </View>
   )
 }
@@ -171,6 +172,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     margin: 5,
     borderRadius: 5,
+  },
+  afterQuestion: {
+    width: '100%',
+    height: 1,
+    marginVertical: 10,
+    borderColor: color.bottomNavActive,
+    borderWidth: 2,
+    borderStyle: 'dashed',
+    borderRadius: 1,
   },
 })
 
