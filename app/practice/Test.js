@@ -64,13 +64,17 @@ const Test = (props) => {
     if (disableTest) {
       return <Hint />
     } else {
-      return <Text style={S.ct}>choose one answer</Text>
+      return (
+        <Text style={[S.ct, { alignSelf: 'center', fontSize: 14 }]}>
+          choose one answer
+        </Text>
+      )
     }
   }
 
   return (
     <View>
-      <Text>{props.title}</Text>
+      <Text style={S.text}>{props.title}</Text>
       <TouchableOpacity
         onPress={() => {
           choice = props.a
@@ -84,7 +88,7 @@ const Test = (props) => {
         ]}
         disabled={disableTest}
       >
-        <Text>{props.a}</Text>
+        <Text style={S.text}>{props.a}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
@@ -99,7 +103,7 @@ const Test = (props) => {
           },
         ]}
       >
-        <Text>{props.b}</Text>
+        <Text style={S.text}>{props.b}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
@@ -114,7 +118,7 @@ const Test = (props) => {
           },
         ]}
       >
-        <Text>{props.c}</Text>
+        <Text style={S.text}>{props.c}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
@@ -129,7 +133,7 @@ const Test = (props) => {
           },
         ]}
       >
-        <Text>{props.d}</Text>
+        <Text style={S.text}>{props.d}</Text>
       </TouchableOpacity>
       <Return />
       <TouchableOpacity

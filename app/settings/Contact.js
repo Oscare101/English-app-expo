@@ -84,18 +84,7 @@ const Lesson = () => {
           </Text>
 
           <TouchableOpacity onPress={onShare} style={S.share}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={[
-                color.backgroundColor,
-                color.backgroundColor,
-                color.backgroundColor,
-                color.bottomNavActive,
-              ]}
-              style={S.gradient}
-            >
-              <Text style={S.shareText}>Share</Text>
-            </LinearGradient>
+            <Text style={S.shareText}>Share</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

@@ -18,6 +18,16 @@ const TestListFile = {
       A: 'is getting',
       hint: 'We use present continuous to talk about temporary situation',
     },
+    {
+      title: '______ (to visit) New York?',
+      a: 'Did you visit',
+      b: 'Do you visit',
+      c: 'Have you ever visited',
+      d: 'Were you visiting',
+      A: 'Have you ever visited',
+      hint:
+        'We use present perfect simple to talk about action in the past which visible in the present',
+    },
   ],
   Articles: [
     {

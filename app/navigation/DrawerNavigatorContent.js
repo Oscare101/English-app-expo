@@ -32,6 +32,7 @@ export default function DrawerNavigatorContent(props) {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setIsDark(!isDark)}
               value={isDark}
+              disabled={false}
             />
           </View>
         </Drawer.Section>

@@ -1,20 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import Header from './Header'
-
-export default function ScreenChat() {
+export default function App() {
   return (
     <View>
       <Header />
-      <Text>chat</Text>
+      <Text>f</Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  view: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
