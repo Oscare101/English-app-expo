@@ -40,9 +40,9 @@ const TestBlock = (props) => {
   const currentTest = TestListFile[currentUnit]
   // return <Text>{currentTest[1].A}</Text>
   return currentTest.map((key) => (
-    <>
+    <View key={key.title}>
+      {/* {console.log(key.title)} */}
       <Test
-        key={key.title}
         title={key.title}
         a={key.a}
         b={key.b}
@@ -51,7 +51,7 @@ const TestBlock = (props) => {
         A={key.A}
         hint={key.hint}
       />
-    </>
+    </View>
   ))
 }
 
