@@ -94,6 +94,7 @@ const S = StyleSheet.create({
     borderRadius: 15,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 0,
+    overflow: 'hidden',
   },
   text: { fontSize: 20 },
   h1: {

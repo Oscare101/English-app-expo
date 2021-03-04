@@ -9,37 +9,13 @@ import {
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import S from './S'
-
-const listAdj = {
-  good: 'superb',
-  bad: 'harrowing',
-  rude: 'vulgar',
-  boring: 'dull, redious',
-  short: 'brief',
-  big: 'huge, enormous',
-  cold: 'freezing',
-  hot: 'scalding (liquids), scorching (heat)',
-  angry: 'furious',
-  funny: 'hilarious',
-  hungry: 'ravenous, starving',
-  slow: 'sluggish',
-  fast: 'rapid',
-  tired: 'exhausted',
-  poor: 'destitute',
-  rich: 'wealthy',
-  happy: 'jubilant, delighted, thrilled',
-  worried: 'anxious',
-  thirsty: 'parched',
-  dirty: 'squalid',
-  clean: 'spotless',
-  scary: 'intimidating',
-}
+import BigList from '../components/BigList'
 
 const VeryList = () => {
   {
-    return Object.keys(listAdj).map((list) => (
+    return Object.keys(BigList.listStrongAdj).map((list) => (
       <Text key={list} style={[S.ct, { fontSize: 22 }]}>
-        {list} &rarr; {listAdj[list]}
+        {list} &rarr; {BigList.listStrongAdj[list]}
       </Text>
     ))
   }

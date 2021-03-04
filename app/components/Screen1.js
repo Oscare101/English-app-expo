@@ -16,6 +16,7 @@ import PresentPerfect from '../lessons/PresentPerfect'
 import Obligation from '../lessons/Obligation'
 import Possibility from '../lessons/Possibility'
 import Articles from '../lessons/Articles'
+import PhrasalVerbs from '../lessons/PhrasalVerbs'
 
 const Screen1 = () => {
   return (
@@ -39,6 +40,7 @@ const Screen1 = () => {
           <Obligation />
           <Prepositions />
           <Articles />
+          <PhrasalVerbs />
 
           <Page title="cheat sheets" />
 
