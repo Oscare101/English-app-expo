@@ -1,15 +1,40 @@
 const BigList = {
   phrasalVerbList: {
     take: {
-      after: 'resemble a family member ,seems like',
-      apart: 'purposely break into pieces',
-      on: 'hire for a job',
-      off: 'start to fly',
-      out: 'remove from a place or thing',
-      over: 'adopt',
-      up: 'to borrow',
-      back: 'return an item',
-      away: 'pick up',
+      after: [
+        '-resemble a family member, seems like',
+        'I take after my father, we are both like swimming',
+      ],
+      apart: [
+        '-purposely break into pieces',
+        'He took the car brakes apart and found the problem',
+      ],
+      on: [
+        '-engage an employee\n-be willing or ready to meet an adversary or opponent',
+        'He took me on as an apprentice\nA group of villagers has taken on the planners',
+      ],
+      out: [
+        '-remove from a place or thing\n-pay for somebody to go somewhere with you',
+        'Can you take the garbage out to the street for me?\nMy grandparents took us out for dinner and a movie',
+      ],
+      off: [
+        '-start to fly\n-remove something (clothing)',
+        'My plane takes off in five minutes\nTake off your socks and shoes and come in the lake!',
+      ],
+      away: [
+        '-to remove or subtract something',
+        "They'd take away all your medals",
+      ],
+
+      up: [
+        '-become interested or engaged in a pursuit\n-occupy time, space, or attention',
+        "She took up tennis at the age of 11\nI don't want to take up any more of your time",
+      ],
+      back: [
+        '-reclaim possession of something\n-accept a partner or spouse again after a separation',
+        'After a year of occupation, they are impatient to take back control of their country\nMost people decide not to take a cheating partner back',
+      ],
+      over: ['-assume control of something', 'Jane, let me take over'],
     },
     put: {
       down: 'put what you are holding on a surface or floor',

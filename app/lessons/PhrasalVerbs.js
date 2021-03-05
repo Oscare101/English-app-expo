@@ -6,28 +6,73 @@ import {
   StyleSheet,
   Modal,
   ScrollView,
+  ToastAndroid,
+  Alert,
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import S from './S'
 import color from '../components/color'
 import BigList from '../components/BigList'
 
+const ShowExample = (text) => {
+  ToastAndroid.showWithGravity(text, ToastAndroid.LONG, ToastAndroid.CENTER)
+  // return (
+  //   <View key={text[1]}>
+  //     <Text>{text[0]}</Text>
+  //   </View>
+  // )
+}
+
 const OutputList = (props) => {
+  const [visibleExample, setVisibleExample] = useState(false)
   return Object.keys(BigList.phrasalVerbList[props.title]).map((list) => (
     <View
       key={BigList.phrasalVerbList[props.title][list]}
       style={styles.titleBlock}
     >
-      <Text
-        style={[
-          S.h3,
-          S.textHint,
-          { textShadowColor: '#E8F8FF', marginBottom: 0 },
-        ]}
+      {/* <Modal
+        key={BigList.phrasalVerbList[props.title][list][1]}
+        animationType="slide"
+        transparent={true}
+        visible={visibleExample}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.')
+          setModalVisible(!modalVisible)
+        }}
       >
-        {list}
-      </Text>
-      <Text style={S.text}>{BigList.phrasalVerbList[props.title][list]}</Text>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>
+              {BigList.phrasalVerbList[props.title][list][1]}
+            </Text>
+            <TouchableOpacity
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setVisibleExample(!visibleExample)}
+            >
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal> */}
+      <TouchableOpacity
+        onPress={() => {
+          ShowExample(BigList.phrasalVerbList[props.title][list][1])
+          // setVisibleExample(!visibleExample)
+        }}
+      >
+        <Text
+          style={[
+            S.h3,
+            S.textHint,
+            { textShadowColor: '#E8F8FF', marginBottom: 0 },
+          ]}
+        >
+          {list}
+        </Text>
+        <Text style={S.text}>
+          {BigList.phrasalVerbList[props.title][list][0]}
+        </Text>
+      </TouchableOpacity>
     </View>
   ))
 }
@@ -38,7 +83,7 @@ const Output = () => {
       <View style={S.titleOrange}>
         <Text style={S.h2}>{list}</Text>
       </View>
-      <View style={[S.blockWithGreen, styles.blocks]}>
+      <View style={[styles.blocks]}>
         <OutputList title={list} />
       </View>
     </View>
@@ -120,17 +165,57 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    backgroundColor: '#E8F8FF',
-    padding: 2,
+    paddingBottom: 10,
   },
   titleBlock: {
     paddingTop: 0,
-    width: '48%',
-    borderRadius: 10,
-    elevation: 10,
+    width: '49%',
+    borderRadius: 5,
+    elevation: 5,
     backgroundColor: color.hintBlock,
     padding: 5,
-    marginVertical: 3,
+    marginVertical: 2,
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#2196F3',
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
   },
 })
 
