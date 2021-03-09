@@ -3,7 +3,7 @@ import { StatusBar, Text } from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import TopNavigation from './TopNavigation'
 import ScreenChat from '../components/ScreenChat'
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, DarkTheme } from '@react-navigation/native'
 import DrawerNavigatorContent from './DrawerNavigatorContent'
 const Drawer = createDrawerNavigator()
 
